@@ -1,7 +1,8 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-
+const hostname = '127.0.0.1';
+const port = 3000;
 http.createServer(function (request, response) {
     console.log('request ', request.url);
 
@@ -58,5 +59,5 @@ http.createServer(function (request, response) {
         }
     });
 
-}).listen(3000);
-console.log('Server running at http://127.0.0.1:3000/');
+}).listen(port, hostname, () => {
+        console.log(`Server running at http://${hostname}:${port}/`); });

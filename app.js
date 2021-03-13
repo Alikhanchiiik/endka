@@ -49,7 +49,7 @@ http.createServer(function (request, response) {
             }
             else {
                 response.writeHead(500);
-                response.end('Internal error with a response code 500: '+error.code+' ..\n');
+                response.end('500-Internal error with a response code 500: '+error.code+' ..\n');
             }
         }
         else {

@@ -37,7 +37,7 @@ http.createServer((request, response) => {
         '.mp4': 'video/mp4',
     };
 
-    let contentType = mimeTypes[extname] || 'application/octet-stream';
+    let contentType = mimeTypes[extname] ;
 
 
     fs.readFile(way, function(error, content) {
